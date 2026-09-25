@@ -30,7 +30,7 @@ export default function AdminCategoriesPage() {
         {/* Left 4 Cols: Category Picker */}
         <div className="lg:col-span-4 space-y-2">
           <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider px-1">
-            Category Sectors (10)
+            Category Sectors ({CATEGORIES_DATA.length})
           </h3>
 
           <div className="bg-white rounded-3xl border border-slate-200/80 p-2 shadow-xs space-y-1">

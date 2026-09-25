@@ -213,7 +213,7 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800"
             >
               <Layers className="w-4 h-4 text-emerald-600" />
-              <span>All 10 Categories</span>
+              <span>All 12 Categories</span>
             </Link>
             <Link
               href="/providers"

@@ -14,7 +14,9 @@ VALUES
   ('cat-personal-lifestyle', 'Personal & Lifestyle', 'personal-and-lifestyle', 'At-home grooming, beauty treatments, photography, videography, and bespoke tailoring.', 'Scissors', 'pink', '#ec4899', 31),
   ('cat-moving-delivery', 'Moving & Delivery', 'moving-and-delivery', 'Safe relocation, protective packing, city-wide deliveries, and secure furniture handling.', 'Truck', 'indigo', '#6366f1', 27),
   ('cat-home-support', 'Home Support', 'home-support', 'Trusted child supervision, senior care, pet exercise, housekeeping, and culinary support.', 'HeartHandshake', 'teal', '#14b8a6', 35),
-  ('cat-professional-services', 'Professional Services', 'professional-services', 'Certified software engineers, digital creators, private tutors, accountants, and consultants.', 'Briefcase', 'blue', '#3b82f6', 48)
+  ('cat-professional-services', 'Professional Services', 'professional-services', 'Certified software engineers, digital creators, private tutors, accountants, and consultants.', 'Briefcase', 'blue', '#3b82f6', 48),
+  ('cat-health-wellness', 'Health & Wellness', 'health-and-wellness', 'Personalized fitness coaching, restorative yoga, therapeutic massage, and certified nutritional counseling.', 'Activity', 'teal', '#0d9488', 34),
+  ('cat-events-entertainment', 'Events & Entertainment', 'events-and-entertainment', 'Professional event planning, live DJ sound setups, aesthetic venue styling, and celebratory photography.', 'PartyPopper', 'violet', '#8b5cf6', 39)
 ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   description = EXCLUDED.description;
@@ -109,7 +111,19 @@ VALUES
   ('srv-tutor', 'cat-professional-services', 'Tutor', 'tutor', 'K-12 & university subject tutoring, mathematics, science, language learning, and exam preparation.', 32.00, 'hour', 'USD', true, '1-2 hours', 'GraduationCap'),
   ('srv-accountant', 'cat-professional-services', 'Accountant', 'accountant', 'Tax filing, bookkeeping, financial statement auditing, and business payroll management.', 55.00, 'hour', 'USD', true, '2-5 hours', 'Calculator'),
   ('srv-legal-consultant', 'cat-professional-services', 'Legal Consultant', 'legal-consultant', 'Contract reviews, NDA drafting, commercial compliance advice, and intellectual property consulting.', 75.00, 'hour', 'USD', false, '1-2 hours', 'Scale'),
-  ('srv-business-consultant', 'cat-professional-services', 'Business Consultant', 'business-consultant', 'Growth strategy, market feasibility research, pitch deck refinement, and operational scaling.', 70.00, 'hour', 'USD', false, '2-4 hours', 'TrendingUp')
+  ('srv-business-consultant', 'cat-professional-services', 'Business Consultant', 'business-consultant', 'Growth strategy, market feasibility research, pitch deck refinement, and operational scaling.', 70.00, 'hour', 'USD', false, '2-4 hours', 'TrendingUp'),
+
+  -- Health & Wellness
+  ('srv-personal-trainer', 'cat-health-wellness', 'Personal Trainer', 'personal-trainer', 'Custom strength, cardio, and weight loss workout regimens delivered at home, outdoors, or private gyms.', 45.00, 'hour', 'USD', true, '1 hour', 'Dumbbell'),
+  ('srv-yoga-instructor', 'cat-health-wellness', 'Yoga Instructor', 'yoga-instructor', 'Vinyasa, Hatha, restorative breathwork, and flexibility coaching for individuals or private groups.', 40.00, 'hour', 'USD', true, '1-1.5 hours', 'Flower2'),
+  ('srv-massage-therapist', 'cat-health-wellness', 'Massage Therapist', 'massage-therapist', 'Deep tissue, Swedish relaxation, trigger point release, and sports recovery massage at home.', 65.00, 'hour', 'USD', true, '1-2 hours', 'Sparkles'),
+  ('srv-nutrition-consultant', 'cat-health-wellness', 'Nutrition Consultant', 'nutrition-consultant', 'Dietary meal plans, metabolic health assessment, grocery planning, and macro tracking guidance.', 50.00, 'hour', 'USD', false, '1 hour', 'Apple'),
+
+  -- Events & Entertainment
+  ('srv-event-planner', 'cat-events-entertainment', 'Event Planner', 'event-planner', 'Full wedding, corporate summit, birthday, and celebration logistics coordination from setup to teardown.', 65.00, 'hour', 'USD', true, 'Flexible', 'Calendar'),
+  ('srv-dj-music-service', 'cat-events-entertainment', 'DJ / Music Service', 'dj-music-service', 'Live music mixing, acoustic sound reinforcement, stage lighting, and curated party playlists.', 75.00, 'hour', 'USD', true, '3-6 hours', 'Music'),
+  ('srv-event-decorator', 'cat-events-entertainment', 'Event Decorator', 'event-decorator', 'Theme design, floral arrangements, backdrop fabrication, and balloon styling for memorable gatherings.', 55.00, 'hour', 'USD', true, '2-5 hours', 'Palette'),
+  ('srv-event-photographer', 'cat-events-entertainment', 'Event Photographer', 'event-photographer', 'High-resolution candids, red carpet shoots, edited digital galleries, and live celebration coverage.', 70.00, 'hour', 'USD', true, '2-6 hours', 'Camera')
 ON CONFLICT (id) DO NOTHING;
 
 -- 3. Seed Default Admin Settings

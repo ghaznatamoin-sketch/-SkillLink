@@ -25,6 +25,10 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, compact = 
     indigo: 'rgba(99, 102, 241, 0.18)',
     teal: 'rgba(20, 184, 166, 0.18)',
     blue: 'rgba(59, 130, 246, 0.18)',
+    violet: 'rgba(139, 92, 246, 0.18)',
+    fuchsia: 'rgba(217, 70, 239, 0.18)',
+    lime: 'rgba(132, 204, 22, 0.18)',
+    orange: 'rgba(249, 115, 22, 0.18)',
   };
 
   const accentBg: Record<string, string> = {
@@ -38,6 +42,10 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, compact = 
     indigo: 'bg-indigo-50 text-indigo-700 border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white',
     teal: 'bg-teal-50 text-teal-700 border-teal-200/80 group-hover:bg-teal-600 group-hover:text-white',
     blue: 'bg-blue-50 text-blue-700 border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white',
+    violet: 'bg-violet-50 text-violet-700 border-violet-200/80 group-hover:bg-violet-600 group-hover:text-white',
+    fuchsia: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200/80 group-hover:bg-fuchsia-600 group-hover:text-white',
+    lime: 'bg-lime-50 text-lime-700 border-lime-200/80 group-hover:bg-lime-600 group-hover:text-white',
+    orange: 'bg-orange-50 text-orange-700 border-orange-200/80 group-hover:bg-orange-600 group-hover:text-white',
   };
 
   const currentGlow = glowStyles[category.accentColor] || 'rgba(16, 185, 129, 0.15)';

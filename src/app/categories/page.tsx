@@ -37,7 +37,7 @@ export default function CategoriesPage() {
             <span>Complete Marketplace Catalog</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            All 10 Categories & 71 Specialized Services
+            All 12 Categories & 79 Specialized Services
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-2xl leading-relaxed">
             Every service is independently selectable. Click on any specific service to find and book available specialists immediately.
@@ -49,7 +49,7 @@ export default function CategoriesPage() {
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            placeholder="Search specific service (e.g. Plumber, CCTV)..."
+            placeholder="Search specific service (e.g. Plumber, Personal Trainer, DJ)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-600 shadow-2xs"
@@ -67,7 +67,7 @@ export default function CategoriesPage() {
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
-          All Categories (10)
+          All Categories (12)
         </button>
 
         {CATEGORIES_DATA.map((cat) => (

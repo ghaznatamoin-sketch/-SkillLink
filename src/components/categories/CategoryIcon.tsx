@@ -68,6 +68,12 @@ import {
   Calculator,
   Scale,
   TrendingUp,
+  Dumbbell,
+  Apple,
+  Music,
+  PartyPopper,
+  Calendar,
+  HeartPulse,
   LucideIcon,
 } from 'lucide-react';
 
@@ -139,12 +145,19 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Calculator,
   Scale,
   TrendingUp,
+  Dumbbell,
+  Apple,
+  Music,
+  PartyPopper,
+  Calendar,
+  HeartPulse,
 };
 
 export const CategoryIcon: React.FC<{
   name: string;
   className?: string;
-}> = ({ name, className = 'w-5 h-5' }) => {
+  style?: React.CSSProperties;
+}> = ({ name, className = 'w-5 h-5', style }) => {
   const IconComponent = ICON_MAP[name] || Wrench;
-  return <IconComponent className={className} />;
+  return <IconComponent className={className} style={style} />;
 };

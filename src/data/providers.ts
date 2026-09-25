@@ -384,6 +384,138 @@ export const INITIAL_PROVIDERS_DATA: Provider[] = [
     badge: 'Top Rated',
     responseTime: '< 30 mins',
     joinedDate: 'July 2023'
+  },
+  {
+    id: 'prov-maya-lin',
+    name: 'Maya Lin',
+    title: 'Certified Holistic Yoga Instructor & Wellness Coach',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80',
+    bio: 'Certified E-RYT 500 yoga teacher and licensed wellness practitioner with 7 years helping clients develop strength, flexibility, breathwork, and therapeutic muscle recovery.',
+    rating: 4.96,
+    reviewCount: 68,
+    experienceYears: 7,
+    completedJobsCount: 190,
+    hourlyRate: 45,
+    currency: 'USD',
+    isVerified: true,
+    isAvailable: true,
+    availabilitySchedule: 'Mon - Sat: 7:00 AM - 6:00 PM PST',
+    location: {
+      city: 'Vancouver',
+      country: 'Canada',
+      state: 'BC',
+      serviceRadiusKm: 25,
+      neighborhoods: ['Downtown', 'Kitsilano', 'Mount Pleasant', 'Yaletown', 'West End']
+    },
+    skills: ['Vinyasa Yoga', 'Breathwork & Pranayama', 'Deep Tissue Recovery', 'Nutritional Meal Guidance', 'Mobility Coaching'],
+    servicesOffered: [
+      {
+        serviceId: 'srv-yoga-instructor',
+        serviceName: 'Yoga Instructor',
+        categoryId: 'cat-health-wellness',
+        categoryName: 'Health & Wellness',
+        price: 40,
+        priceUnit: 'hour',
+        description: 'Private 1-on-1 or small group restorative and dynamic flow sessions at home or outdoors.'
+      },
+      {
+        serviceId: 'srv-personal-trainer',
+        serviceName: 'Personal Trainer',
+        categoryId: 'cat-health-wellness',
+        categoryName: 'Health & Wellness',
+        price: 45,
+        priceUnit: 'hour',
+        description: 'Targeted functional fitness, core strengthening, and stamina building routines.'
+      },
+      {
+        serviceId: 'srv-massage-therapist',
+        serviceName: 'Massage Therapist',
+        categoryId: 'cat-health-wellness',
+        categoryName: 'Health & Wellness',
+        price: 65,
+        priceUnit: 'hour',
+        description: 'Therapeutic deep tissue and Swedish relaxation massage therapy on-site.'
+      },
+      {
+        serviceId: 'srv-nutrition-consultant',
+        serviceName: 'Nutrition Consultant',
+        categoryId: 'cat-health-wellness',
+        categoryName: 'Health & Wellness',
+        price: 50,
+        priceUnit: 'hour',
+        description: 'Evidence-based meal structuring, macronutrient planning, and healthy lifestyle consulting.'
+      }
+    ],
+    languages: ['English', 'Mandarin'],
+    badge: 'Elite Specialist',
+    responseTime: '< 15 mins',
+    joinedDate: 'February 2023'
+  },
+  {
+    id: 'prov-julian-vance',
+    name: 'Julian Vance',
+    title: 'Lead Event Director & Live Audio Producer',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
+    bio: 'Experienced event designer, music director, and audiovisual technician with 9 years organizing corporate galas, private celebrations, concerts, and luxury weddings.',
+    rating: 4.92,
+    reviewCount: 94,
+    experienceYears: 9,
+    completedJobsCount: 215,
+    hourlyRate: 70,
+    currency: 'USD',
+    isVerified: true,
+    isAvailable: true,
+    availabilitySchedule: 'Wed - Sun: 10:00 AM - 11:00 PM GMT',
+    location: {
+      city: 'London',
+      country: 'United Kingdom',
+      state: 'Greater London',
+      serviceRadiusKm: 40,
+      neighborhoods: ['Westminster', 'Camden', 'Kensington', 'Shoreditch', 'Canary Wharf']
+    },
+    skills: ['Event Operations', 'Live Audio Mixing', 'Stage & Lighting Design', 'Curated Setlists', 'Vendor Management'],
+    servicesOffered: [
+      {
+        serviceId: 'srv-event-planner',
+        serviceName: 'Event Planner',
+        categoryId: 'cat-events-entertainment',
+        categoryName: 'Events & Entertainment',
+        price: 65,
+        priceUnit: 'hour',
+        description: 'End-to-end venue timeline orchestration, supplier negotiation, and day-of execution.'
+      },
+      {
+        serviceId: 'srv-dj-music-service',
+        serviceName: 'DJ / Music Service',
+        categoryId: 'cat-events-entertainment',
+        categoryName: 'Events & Entertainment',
+        price: 75,
+        priceUnit: 'hour',
+        description: 'Full sound system, intelligent lighting, wireless microphones, and versatile genre sets.'
+      },
+      {
+        serviceId: 'srv-event-decorator',
+        serviceName: 'Event Decorator',
+        categoryId: 'cat-events-entertainment',
+        categoryName: 'Events & Entertainment',
+        price: 55,
+        priceUnit: 'hour',
+        description: 'Aesthetic theme customization, centerpiece construction, and lighting accents.'
+      },
+      {
+        serviceId: 'srv-event-photographer',
+        serviceName: 'Event Photographer',
+        categoryId: 'cat-events-entertainment',
+        categoryName: 'Events & Entertainment',
+        price: 70,
+        priceUnit: 'hour',
+        description: 'High-speed party and ceremonial photography with color-graded digital gallery.'
+      }
+    ],
+    languages: ['English', 'French'],
+    badge: 'Top Rated',
+    responseTime: '< 20 mins',
+    joinedDate: 'May 2023'
   }
 ];
 

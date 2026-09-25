@@ -1017,6 +1017,134 @@ export const CATEGORIES_DATA: Category[] = [
         iconName: 'TrendingUp'
       }
     ]
+  },
+  {
+    id: 'cat-health-wellness',
+    name: 'Health & Wellness',
+    slug: 'health-and-wellness',
+    description: 'Personalized fitness coaching, restorative yoga, therapeutic massage, and certified nutritional counseling.',
+    iconName: 'Activity',
+    accentColor: 'teal',
+    accentHex: '#0d9488',
+    totalProvidersCount: 34,
+    services: [
+      {
+        id: 'srv-personal-trainer',
+        name: 'Personal Trainer',
+        slug: 'personal-trainer',
+        categoryId: 'cat-health-wellness',
+        description: 'Custom strength, cardio, and weight loss workout regimens delivered at home, outdoors, or private gyms.',
+        startingPrice: 45,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '1 hour',
+        iconName: 'Dumbbell'
+      },
+      {
+        id: 'srv-yoga-instructor',
+        name: 'Yoga Instructor',
+        slug: 'yoga-instructor',
+        categoryId: 'cat-health-wellness',
+        description: 'Vinyasa, Hatha, restorative breathwork, and flexibility coaching for individuals or private groups.',
+        startingPrice: 40,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '1-1.5 hours',
+        iconName: 'Flower2'
+      },
+      {
+        id: 'srv-massage-therapist',
+        name: 'Massage Therapist',
+        slug: 'massage-therapist',
+        categoryId: 'cat-health-wellness',
+        description: 'Deep tissue, Swedish relaxation, trigger point release, and sports recovery massage at home.',
+        startingPrice: 65,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '1-2 hours',
+        iconName: 'Sparkles'
+      },
+      {
+        id: 'srv-nutrition-consultant',
+        name: 'Nutrition Consultant',
+        slug: 'nutrition-consultant',
+        categoryId: 'cat-health-wellness',
+        description: 'Dietary meal plans, metabolic health assessment, grocery planning, and macro tracking guidance.',
+        startingPrice: 50,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: false,
+        estimatedDuration: '1 hour',
+        iconName: 'Apple'
+      }
+    ]
+  },
+  {
+    id: 'cat-events-entertainment',
+    name: 'Events & Entertainment',
+    slug: 'events-and-entertainment',
+    description: 'Professional event planning, live DJ sound setups, aesthetic venue styling, and celebratory photography.',
+    iconName: 'PartyPopper',
+    accentColor: 'violet',
+    accentHex: '#8b5cf6',
+    totalProvidersCount: 39,
+    services: [
+      {
+        id: 'srv-event-planner',
+        name: 'Event Planner',
+        slug: 'event-planner',
+        categoryId: 'cat-events-entertainment',
+        description: 'Full wedding, corporate summit, birthday, and celebration logistics coordination from setup to teardown.',
+        startingPrice: 65,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: 'Flexible',
+        iconName: 'Calendar'
+      },
+      {
+        id: 'srv-dj-music-service',
+        name: 'DJ / Music Service',
+        slug: 'dj-music-service',
+        categoryId: 'cat-events-entertainment',
+        description: 'Live music mixing, acoustic sound reinforcement, stage lighting, and curated party playlists.',
+        startingPrice: 75,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '3-6 hours',
+        iconName: 'Music'
+      },
+      {
+        id: 'srv-event-decorator',
+        name: 'Event Decorator',
+        slug: 'event-decorator',
+        categoryId: 'cat-events-entertainment',
+        description: 'Theme design, floral arrangements, backdrop fabrication, and balloon styling for memorable gatherings.',
+        startingPrice: 55,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '2-5 hours',
+        iconName: 'Palette'
+      },
+      {
+        id: 'srv-event-photographer',
+        name: 'Event Photographer',
+        slug: 'event-photographer',
+        categoryId: 'cat-events-entertainment',
+        description: 'High-resolution candids, red carpet shoots, edited digital galleries, and live celebration coverage.',
+        startingPrice: 70,
+        priceUnit: 'hour',
+        currency: 'USD',
+        popular: true,
+        estimatedDuration: '2-6 hours',
+        iconName: 'Camera'
+      }
+    ]
   }
 ];
 

@@ -46,20 +46,20 @@ export default function HomePage() {
               {/* Trust Tag */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-300/50 text-emerald-900 text-xs font-semibold shadow-2xs">
                 <ShieldCheck className="w-4 h-4 text-emerald-700" />
-                <span>Worldwide Marketplace · 10 Verified Service Sectors</span>
+                <span>Worldwide Marketplace · 12 Verified Service Sectors</span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Hire trusted pros for{' '}
                 <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">
-                  home, repair & technology
+                  home, repair, wellness & events
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-                Connect directly with verified electricians, AC technicians, plumbers, cleaners, developers, and craftsmen worldwide. Transparent pricing and real ratings.
+                Connect directly with verified electricians, AC technicians, plumbers, fitness trainers, event planners, and craftsmen worldwide. Transparent pricing and real ratings.
               </p>
 
               {/* Hero Search Box */}
@@ -71,7 +71,7 @@ export default function HomePage() {
                   <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
-                    placeholder="What service do you need? (e.g. AC Repair, Plumber)"
+                    placeholder="What service do you need? (e.g. AC Repair, Personal Trainer, Plumber)"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-3 py-2.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none bg-transparent"
@@ -108,8 +108,9 @@ export default function HomePage() {
                 {[
                   { label: 'AC Technician', slug: 'ac-technician' },
                   { label: 'Electrician', slug: 'electrician' },
+                  { label: 'Personal Trainer', slug: 'personal-trainer' },
+                  { label: 'Event Planner', slug: 'event-planner' },
                   { label: 'Deep Cleaning', slug: 'deep-cleaning' },
-                  { label: 'Web Developer', slug: 'web-developer' },
                   { label: 'Plumber', slug: 'plumber' },
                 ].map((item) => (
                   <Link
@@ -140,7 +141,7 @@ export default function HomePage() {
               <span>Explore Categories</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              All 10 Core Service Sectors
+              All 12 Core Service Sectors
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
               Every category contains distinct, selectable individual services with verified specialists.
@@ -151,12 +152,12 @@ export default function HomePage() {
             href="/categories"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
           >
-            <span>View Full Service Catalog (71 Services)</span>
+            <span>View Full Service Catalog (79 Services)</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        {/* 10 Categories Grid */}
+        {/* 12 Categories Grid (4 columns × 3 rows on desktop) */}
         <CategoryGrid categories={CATEGORIES_DATA} columns={4} />
       </section>
 
@@ -180,7 +181,7 @@ export default function HomePage() {
               {
                 step: '01',
                 title: 'Choose Service',
-                desc: 'Browse our categorized directory of 71+ specialized services with clear starting pricing.',
+                desc: 'Browse our categorized directory of 79 specialized services with clear starting pricing.',
                 icon: Layers,
               },
               {
