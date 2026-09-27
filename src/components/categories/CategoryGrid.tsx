@@ -13,13 +13,12 @@ interface CategoryGridProps {
 export const CategoryGrid: React.FC<CategoryGridProps> = ({
   categories,
   compact = false,
-  columns = 4,
+  columns = 2,
 }) => {
-  const gridClasses = {
-    2: 'grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6',
-    3: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6',
-    4: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6',
-  }[columns];
+  // Always arrange in PAIRS (2 cards per row) on medium/large screens for visual balance
+  const gridClasses = columns === 4 
+    ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6'
+    : 'grid grid-cols-1 md:grid-cols-2 gap-6';
 
   return (
     <div className={gridClasses}>

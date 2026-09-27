@@ -6,19 +6,14 @@ import { useMarketplace } from '@/context/MarketplaceContext';
 import { useToast } from '@/context/ToastContext';
 import { StatWidget } from '@/components/dashboards/StatWidget';
 import { StatusBadge } from '@/components/common/Badge';
-import { CATEGORIES_DATA } from '@/data/categories';
 import {
   ShieldCheck,
   DollarSign,
-  Users,
   Briefcase,
-  Layers,
   AlertTriangle,
   ArrowRight,
   TrendingUp,
   Percent,
-  Sliders,
-  CheckCircle2,
 } from 'lucide-react';
 
 export default function AdminOverviewPage() {
@@ -53,13 +48,13 @@ export default function AdminOverviewPage() {
   return (
     <div className="space-y-6">
       {/* Admin Protected Header */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-lg border border-emerald-500/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div className="space-y-1.5 max-w-xl">
-          <div className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold bg-emerald-500/20 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+      <div className="bg-gradient-to-r from-emerald-950 via-[#0a1a14] to-charcoal-950 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-black/40 border border-emerald-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="space-y-2 max-w-xl">
+          <div className="inline-flex items-center gap-1.5 text-xs text-amber-300 font-semibold bg-amber-950/80 px-2.5 py-0.5 rounded-full border border-amber-400/30">
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
             <span>Platform Owner & Administrator Center</span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-100">
             SkillLink Marketplace Health
           </h1>
           <p className="text-xs text-slate-300 leading-relaxed">
@@ -67,17 +62,17 @@ export default function AdminOverviewPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-shrink-0">
           <Link
             href="/admin/commission"
-            className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all"
+            className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold text-xs shadow-md border border-emerald-500/30 transition-all"
           >
             Commission Settings ({commissionRate}%)
           </Link>
         </div>
       </div>
 
-      {/* Metric Cards Row */}
+      {/* Metric Cards Row - 2 pairs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatWidget
           label="Total Gross Volume"
@@ -109,15 +104,15 @@ export default function AdminOverviewPage() {
       </div>
 
       {/* Quick Commission Adjust Widget */}
-      <div className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="bg-[#0e1714]/85 backdrop-blur-xl rounded-3xl border border-emerald-500/20 p-6 shadow-xl shadow-black/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-1 max-w-lg">
           <div className="flex items-center gap-2">
-            <Percent className="w-4 h-4 text-emerald-600" />
-            <h3 className="font-bold text-slate-900 text-sm">
+            <Percent className="w-4 h-4 text-amber-300" />
+            <h3 className="font-bold text-slate-100 text-sm">
               Dynamic Platform Commission Rate
             </h3>
           </div>
-          <p className="text-xs text-slate-500 leading-relaxed">
+          <p className="text-xs text-slate-400 leading-relaxed">
             As outlined in the PRD, commission is fully configurable rather than hardcoded into business logic. Adjusting this modifies splits on all new bookings.
           </p>
         </div>
@@ -131,7 +126,7 @@ export default function AdminOverviewPage() {
               step="0.5"
               value={inputCommission}
               onChange={(e) => setInputCommission(e.target.value)}
-              className="w-full px-3 py-2 text-sm font-bold text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 pr-7"
+              className="w-full px-3 py-2 text-sm font-bold text-amber-300 rounded-xl border border-emerald-900/40 bg-[#121f19] focus:outline-none focus:ring-2 focus:ring-emerald-500 pr-7"
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">
               %
@@ -140,7 +135,7 @@ export default function AdminOverviewPage() {
 
           <button
             type="submit"
-            className="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-xs transition-all whitespace-nowrap"
+            className="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold text-xs border border-emerald-500/30 shadow-md transition-all whitespace-nowrap"
           >
             Apply Rate
           </button>
@@ -148,14 +143,14 @@ export default function AdminOverviewPage() {
       </div>
 
       {/* Platform Global Bookings Table */}
-      <div className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-xs space-y-4">
+      <div className="bg-[#0e1714]/85 backdrop-blur-xl rounded-3xl border border-emerald-500/20 p-6 shadow-xl shadow-black/40 space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-bold text-slate-900">
+          <h3 className="text-base font-bold text-slate-100">
             Live Platform Bookings Audit ({bookings.length})
           </h3>
           <Link
             href="/admin/bookings"
-            className="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center gap-1"
+            className="text-xs font-semibold text-emerald-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
           >
             <span>Full Ledger</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -165,33 +160,33 @@ export default function AdminOverviewPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-slate-200 text-slate-400 uppercase tracking-wider text-[10px]">
+              <tr className="border-b border-emerald-900/30 text-slate-400 uppercase tracking-wider text-[10px]">
                 <th className="py-3 px-3">Booking ID</th>
                 <th className="py-3 px-3">Service & Category</th>
                 <th className="py-3 px-3">Customer</th>
                 <th className="py-3 px-3">Specialist</th>
                 <th className="py-3 px-3">Status</th>
                 <th className="py-3 px-3">Customer Total</th>
-                <th className="py-3 px-3 font-bold text-emerald-800">Platform Comm</th>
+                <th className="py-3 px-3 font-bold text-amber-300">Platform Comm</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-emerald-900/20">
               {bookings.map((bk) => (
-                <tr key={bk.id} className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-3 font-mono text-slate-400">#{bk.id}</td>
+                <tr key={bk.id} className="hover:bg-[#121f19]/60 transition-colors">
+                  <td className="py-3.5 px-3 font-mono text-amber-400">#{bk.id.substring(0, 8)}</td>
                   <td className="py-3.5 px-3">
-                    <strong className="text-slate-900 font-bold block">{bk.serviceName}</strong>
+                    <strong className="text-slate-100 font-bold block">{bk.serviceName}</strong>
                     <span className="text-slate-400 text-[10px]">{bk.categoryName}</span>
                   </td>
-                  <td className="py-3.5 px-3 font-medium text-slate-700">{bk.customerName}</td>
-                  <td className="py-3.5 px-3 font-medium text-slate-700">{bk.providerName}</td>
+                  <td className="py-3.5 px-3 font-medium text-slate-300">{bk.customerName}</td>
+                  <td className="py-3.5 px-3 font-medium text-slate-300">{bk.providerName}</td>
                   <td className="py-3.5 px-3">
                     <StatusBadge status={bk.status} />
                   </td>
-                  <td className="py-3.5 px-3 font-bold text-slate-900">
+                  <td className="py-3.5 px-3 font-bold text-slate-200">
                     ${bk.pricing.totalCustomerPayment.toFixed(2)}
                   </td>
-                  <td className="py-3.5 px-3 font-extrabold text-emerald-700">
+                  <td className="py-3.5 px-3 font-extrabold text-amber-300">
                     +${bk.pricing.platformCommissionAmount.toFixed(2)}
                   </td>
                 </tr>
@@ -203,3 +198,4 @@ export default function AdminOverviewPage() {
     </div>
   );
 }
+

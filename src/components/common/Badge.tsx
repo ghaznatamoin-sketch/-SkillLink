@@ -22,18 +22,18 @@ export const StatusBadge: React.FC<BadgeProps> = ({ status, size = 'sm' }) => {
     case 'requested':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-amber-50 text-amber-800 border border-amber-300/70 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-amber-950/70 text-amber-300 border border-amber-500/30 ${sizeClasses}`}
         >
-          <Clock className="w-3.5 h-3.5 text-amber-600" />
+          <Clock className="w-3.5 h-3.5 text-amber-400" />
           <span>Requested</span>
         </span>
       );
     case 'accepted':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-sky-50 text-sky-800 border border-sky-300/70 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-sky-950/70 text-sky-300 border border-sky-500/30 ${sizeClasses}`}
         >
-          <CheckCircle2 className="w-3.5 h-3.5 text-sky-600" />
+          <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
           <span>Accepted</span>
         </span>
       );
@@ -41,34 +41,34 @@ export const StatusBadge: React.FC<BadgeProps> = ({ status, size = 'sm' }) => {
     case 'in-progress':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300/70 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-emerald-950/70 text-emerald-300 border border-emerald-500/40 ${sizeClasses}`}
         >
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
           <span>In Progress</span>
         </span>
       );
     case 'completed':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-emerald-100 text-emerald-900 border border-emerald-400 font-bold ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-emerald-900/80 text-emerald-200 border border-emerald-400/50 font-bold shadow-xs shadow-emerald-950/40 ${sizeClasses}`}
         >
-          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+          <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
           <span>Completed</span>
         </span>
       );
     case 'rejected':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-rose-50 text-rose-800 border border-rose-300/70 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-rose-950/70 text-rose-300 border border-rose-500/30 ${sizeClasses}`}
         >
-          <XCircle className="w-3.5 h-3.5 text-rose-600" />
+          <XCircle className="w-3.5 h-3.5 text-rose-400" />
           <span>Rejected</span>
         </span>
       );
     case 'cancelled':
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-300 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-[#16211c] text-slate-400 border border-slate-700/50 ${sizeClasses}`}
         >
           <Ban className="w-3.5 h-3.5 text-slate-500" />
           <span>Cancelled</span>
@@ -77,7 +77,7 @@ export const StatusBadge: React.FC<BadgeProps> = ({ status, size = 'sm' }) => {
     default:
       return (
         <span
-          className={`inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-200 ${sizeClasses}`}
+          className={`inline-flex items-center rounded-full bg-[#16211c] text-slate-300 border border-emerald-900/40 ${sizeClasses}`}
         >
           <span>{status}</span>
         </span>

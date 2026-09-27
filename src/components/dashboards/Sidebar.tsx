@@ -88,11 +88,11 @@ export const DashboardSidebar: React.FC<SidebarProps> = ({ role }) => {
   }[role];
 
   return (
-    <aside className="w-full lg:w-64 bg-white border-r border-slate-200/80 p-4 sm:p-5 flex flex-col justify-between h-auto lg:min-h-[calc(100vh-6.5rem)]">
+    <aside className="w-full lg:w-64 bg-[#080d0b] border-r border-emerald-900/30 p-4 sm:p-5 flex flex-col justify-between h-auto lg:min-h-[calc(100vh-6.5rem)]">
       <div>
         {/* Role Header Badge */}
-        <div className="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-100 mb-6 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-bold text-sm shadow-xs">
+        <div className="p-3 rounded-2xl bg-[#0e1714] border border-emerald-500/20 mb-6 flex items-center gap-3 shadow-md">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-700 via-emerald-900 to-[#041a12] text-white flex items-center justify-center font-bold text-sm shadow-md border border-amber-500/30">
             {user?.avatarUrl ? (
               <img src={user.avatarUrl} alt={user.name} className="w-full h-full object-cover rounded-xl" />
             ) : (
@@ -100,8 +100,8 @@ export const DashboardSidebar: React.FC<SidebarProps> = ({ role }) => {
             )}
           </div>
           <div className="min-w-0 flex-1">
-            <h4 className="font-bold text-slate-900 text-xs truncate">{user?.name || 'User'}</h4>
-            <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-100/70 px-1.5 py-0.2 rounded inline-block">
+            <h4 className="font-bold text-slate-100 text-xs truncate">{user?.name || 'User'}</h4>
+            <span className="text-[10px] font-semibold text-amber-300 bg-amber-950/80 px-1.5 py-0.2 rounded border border-amber-400/30 inline-block">
               {roleTitle}
             </span>
           </div>
@@ -119,19 +119,19 @@ export const DashboardSidebar: React.FC<SidebarProps> = ({ role }) => {
                 href={item.href}
                 className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                   isActive
-                    ? 'bg-emerald-700 text-white shadow-sm shadow-emerald-900/10'
-                    : 'text-slate-600 hover:text-emerald-800 hover:bg-slate-50'
+                    ? 'bg-gradient-to-r from-emerald-800 to-emerald-700 text-amber-300 shadow-md border border-amber-500/30'
+                    : 'text-slate-300 hover:text-white hover:bg-[#121f19]'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-amber-300' : 'text-emerald-400'}`} />
                   <span>{item.label}</span>
                 </div>
 
                 {item.count !== undefined && item.count > 0 && (
                   <span
                     className={`px-1.5 py-0.5 text-[10px] font-bold rounded-full ${
-                      isActive ? 'bg-white text-emerald-800' : 'bg-emerald-100 text-emerald-800'
+                      isActive ? 'bg-amber-400 text-slate-950' : 'bg-emerald-950 text-emerald-300 border border-emerald-500/30'
                     }`}
                   >
                     {item.count}
@@ -144,12 +144,12 @@ export const DashboardSidebar: React.FC<SidebarProps> = ({ role }) => {
       </div>
 
       {/* Footer quick link */}
-      <div className="pt-6 border-t border-slate-100 mt-6">
+      <div className="pt-6 border-t border-emerald-900/30 mt-6">
         <Link
           href="/providers"
-          className="flex items-center justify-center gap-1.5 w-full py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+          className="flex items-center justify-center gap-1.5 w-full py-2.5 rounded-xl border border-emerald-900/40 bg-[#0e1714] text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#121f19] transition-colors"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
           <span>Browse Public Services</span>
         </Link>
       </div>

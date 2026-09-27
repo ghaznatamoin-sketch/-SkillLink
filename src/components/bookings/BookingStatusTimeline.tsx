@@ -42,13 +42,13 @@ export const BookingStatusTimeline: React.FC<BookingStatusTimelineProps> = ({
 
   if (isRejected || isCancelled) {
     return (
-      <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 flex items-center gap-3 text-rose-800">
-        <XCircle className="w-5 h-5 flex-shrink-0 text-rose-600" />
+      <div className="p-4 rounded-2xl bg-rose-950/60 border border-rose-500/30 flex items-center gap-3 text-rose-300">
+        <XCircle className="w-5 h-5 flex-shrink-0 text-rose-400" />
         <div>
           <h5 className="font-bold text-sm">
             Booking {isRejected ? 'Declined / Rejected' : 'Cancelled'}
           </h5>
-          <p className="text-xs text-rose-600 mt-0.5">
+          <p className="text-xs text-rose-300/80 mt-0.5">
             This booking was {isRejected ? 'declined by the service provider' : 'cancelled'}.
           </p>
         </div>
@@ -57,14 +57,14 @@ export const BookingStatusTimeline: React.FC<BookingStatusTimelineProps> = ({
   }
 
   return (
-    <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-      <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-6">
+    <div className="p-5 rounded-2xl bg-[#0e1714]/85 backdrop-blur-xl border border-emerald-500/20 shadow-xl shadow-black/40">
+      <h4 className="font-bold text-slate-100 text-xs uppercase tracking-wider mb-6">
         Service Progress Tracker
       </h4>
 
       <div className="relative">
         {/* Progress Bar Line */}
-        <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-slate-200 -z-0" />
+        <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-emerald-950 -z-0" />
 
         <div className="space-y-6">
           {STAGES.map((stage, idx) => {
@@ -80,18 +80,18 @@ export const BookingStatusTimeline: React.FC<BookingStatusTimelineProps> = ({
                 <div
                   className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border-2 transition-all ${
                     isCompleted
-                      ? 'bg-emerald-600 border-emerald-600 text-white'
+                      ? 'bg-emerald-600 border-emerald-500 text-white shadow-sm'
                       : isCurrent
-                      ? 'bg-white border-emerald-600 text-emerald-600 ring-4 ring-emerald-100'
-                      : 'bg-white border-slate-300 text-slate-300'
+                      ? 'bg-[#0e1714] border-amber-400 text-amber-400 ring-4 ring-amber-400/20'
+                      : 'bg-[#121f19] border-emerald-900 text-slate-600'
                   }`}
                 >
                   {isCompleted ? (
-                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-300" />
                   ) : isCurrent ? (
-                    <span className="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
                   ) : (
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-900"></span>
                   )}
                 </div>
 
@@ -100,7 +100,7 @@ export const BookingStatusTimeline: React.FC<BookingStatusTimelineProps> = ({
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <h5
                       className={`text-xs font-bold ${
-                        isCompleted || isCurrent ? 'text-slate-900' : 'text-slate-400'
+                        isCompleted || isCurrent ? 'text-slate-100' : 'text-slate-500'
                       }`}
                     >
                       {stage.label}
@@ -118,7 +118,7 @@ export const BookingStatusTimeline: React.FC<BookingStatusTimelineProps> = ({
                     )}
                   </div>
 
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-[11px] text-slate-400 mt-0.5">
                     {eventData?.note || stage.desc}
                   </p>
                 </div>

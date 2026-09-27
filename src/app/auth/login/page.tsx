@@ -74,23 +74,23 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center p-4 sm:p-6">
-      <div className="max-w-md w-full bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8 shadow-xl shadow-emerald-950/5 space-y-6">
+      <div className="max-w-md w-full bg-[#0e1714]/90 backdrop-blur-xl rounded-3xl border border-emerald-500/25 p-6 sm:p-8 shadow-2xl shadow-black/60 space-y-6">
         {/* Brand */}
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-white mx-auto shadow-md">
-            <Sparkles className="w-6 h-6 text-mint-300" />
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-700 via-emerald-900 to-[#041a12] flex items-center justify-center text-white mx-auto shadow-md border border-amber-500/30">
+            <Sparkles className="w-6 h-6 text-amber-300" />
           </div>
-          <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl font-extrabold text-slate-100 tracking-tight">
             Log in to SkillLink
           </h1>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             Access your bookings, job requests, or platform controls.
           </p>
         </div>
 
         {/* Role Fast Selector */}
         <div className="space-y-1.5">
-          <label className="block text-xs font-bold text-slate-700">Select Role to Demo</label>
+          <label className="block text-xs font-bold text-slate-300">Select Role to Demo</label>
           <div className="grid grid-cols-3 gap-2">
             {[
               { role: 'customer' as UserRole, label: 'Customer', icon: UserCheck },
@@ -104,10 +104,10 @@ export default function LoginPage() {
                   type="button"
                   key={item.role}
                   onClick={() => handleRolePreset(item.role)}
-                  className={`py-2 px-2 rounded-xl text-xs font-semibold flex flex-col items-center gap-1 border transition-all ${
+                  className={`py-2.5 px-2 rounded-xl text-xs font-semibold flex flex-col items-center gap-1 border transition-all ${
                     isActive
-                      ? 'bg-emerald-50 text-emerald-800 border-emerald-500 ring-2 ring-emerald-200 font-bold'
-                      : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                      ? 'bg-gradient-to-r from-emerald-800 to-emerald-700 text-amber-300 border-amber-400/50 ring-2 ring-amber-400/20 font-bold shadow-md'
+                      : 'border-emerald-900/40 bg-[#121f19] text-slate-300 hover:bg-[#182a22]'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -122,7 +122,7 @@ export default function LoginPage() {
         <button
           type="button"
           onClick={handleGoogleLogin}
-          className="w-full py-2.5 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center justify-center gap-2.5 shadow-2xs transition-all"
+          className="w-full py-2.5 px-4 rounded-xl border border-emerald-900/40 bg-[#121f19] hover:bg-[#182a22] text-slate-200 text-xs font-semibold flex items-center justify-center gap-2.5 shadow-md transition-all"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24">
             <path
@@ -146,21 +146,21 @@ export default function LoginPage() {
         </button>
 
         <div className="relative flex items-center justify-center">
-          <div className="w-full border-t border-slate-200" />
-          <span className="bg-white px-3 text-[11px] text-slate-400 font-medium absolute">or email</span>
+          <div className="w-full border-t border-emerald-900/40" />
+          <span className="bg-[#0e1714] px-3 text-[11px] text-slate-400 font-medium absolute">or email</span>
         </div>
 
         {/* Email & Password Form */}
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+            <label className="block text-xs font-bold text-slate-300 mb-1">Email Address</label>
             <div className="relative">
-              <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Mail className="w-4 h-4 text-emerald-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white"
+                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-emerald-900/40 bg-[#121f19] text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 required
               />
             </div>
@@ -168,18 +168,18 @@ export default function LoginPage() {
 
           <div>
             <div className="flex items-center justify-between mb-1">
-              <label className="text-xs font-bold text-slate-700">Password</label>
-              <Link href="/auth/forgot-password" className="text-[11px] font-semibold text-emerald-700 hover:underline">
+              <label className="text-xs font-bold text-slate-300">Password</label>
+              <Link href="/auth/forgot-password" className="text-[11px] font-semibold text-amber-400 hover:underline">
                 Forgot password?
               </Link>
             </div>
             <div className="relative">
-              <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Lock className="w-4 h-4 text-emerald-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white"
+                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-emerald-900/40 bg-[#121f19] text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 required
               />
             </div>
@@ -188,16 +188,16 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-md shadow-emerald-900/10 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white text-xs font-bold shadow-lg shadow-emerald-950/50 border border-emerald-500/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50"
           >
             <span>{isLoading ? 'Signing in...' : 'Sign In'}</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-amber-300" />
           </button>
         </form>
 
-        <div className="text-center text-xs text-slate-500 pt-2 border-t border-slate-100">
+        <div className="text-center text-xs text-slate-400 pt-2 border-t border-emerald-900/30">
           <span>Don&apos;t have an account yet? </span>
-          <Link href="/auth/register" className="font-bold text-emerald-700 hover:underline">
+          <Link href="/auth/register" className="font-bold text-amber-400 hover:underline">
             Register now
           </Link>
         </div>

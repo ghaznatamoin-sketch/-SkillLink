@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Users, Search, Mail, Phone, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
+import { Search, CheckCircle2 } from 'lucide-react';
 
 const MOCK_CUSTOMERS = [
   {
@@ -62,12 +62,12 @@ export default function AdminCustomersPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-emerald-900/30">
         <div>
-          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-100 tracking-tight">
             Customer Directory ({MOCK_CUSTOMERS.length})
           </h1>
-          <p className="text-xs text-slate-500 mt-0.5">
+          <p className="text-xs text-slate-400 mt-0.5">
             Registered customer accounts, booking activity, and spend metrics worldwide.
           </p>
         </div>
@@ -79,16 +79,16 @@ export default function AdminCustomersPage() {
             placeholder="Search customers..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+            className="w-full pl-9 pr-3 py-2 rounded-xl border border-emerald-900/40 bg-[#121f19] text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
       </div>
 
-      <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
+      <div className="bg-[#0e1714]/85 backdrop-blur-xl rounded-3xl border border-emerald-500/20 shadow-xl shadow-black/40 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-slate-200 text-slate-400 uppercase tracking-wider text-[10px] bg-slate-50/50">
+              <tr className="border-b border-emerald-900/30 text-slate-400 uppercase tracking-wider text-[10px] bg-[#0c1712]">
                 <th className="py-3.5 px-4">Customer Name</th>
                 <th className="py-3.5 px-4">Contact Info</th>
                 <th className="py-3.5 px-4">Location</th>
@@ -97,31 +97,31 @@ export default function AdminCustomersPage() {
                 <th className="py-3.5 px-4">Account Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-emerald-900/20">
               {filtered.map((c) => (
-                <tr key={c.id} className="hover:bg-slate-50 transition-colors">
-                  <td className="py-4 px-4 font-bold text-slate-900">
+                <tr key={c.id} className="hover:bg-[#121f19]/60 transition-colors">
+                  <td className="py-4 px-4 font-bold text-slate-100">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs">
+                      <div className="w-8 h-8 rounded-full bg-[#121f19] border border-emerald-500/30 text-amber-300 font-bold flex items-center justify-center text-xs">
                         {c.name.charAt(0)}
                       </div>
                       <span>{c.name}</span>
                     </div>
                   </td>
-                  <td className="py-4 px-4 text-slate-600">
+                  <td className="py-4 px-4 text-slate-300">
                     <span className="block">{c.email}</span>
-                    <span className="text-slate-400 text-[11px]">{c.phone}</span>
+                    <span className="text-slate-500 text-[11px]">{c.phone}</span>
                   </td>
-                  <td className="py-4 px-4 text-slate-600">{c.location}</td>
-                  <td className="py-4 px-4 font-semibold text-slate-800">
+                  <td className="py-4 px-4 text-slate-300">{c.location}</td>
+                  <td className="py-4 px-4 font-semibold text-slate-200">
                     {c.bookingsCount} orders
                   </td>
-                  <td className="py-4 px-4 font-bold text-emerald-700">
+                  <td className="py-4 px-4 font-bold text-amber-300">
                     ${c.totalSpent.toFixed(2)}
                   </td>
                   <td className="py-4 px-4">
-                    <span className="inline-flex items-center gap-1 text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full text-[10px] font-bold">
-                      <CheckCircle2 className="w-3 h-3" />
+                    <span className="inline-flex items-center gap-1 text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-bold shadow-xs">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-400" />
                       Active
                     </span>
                   </td>
@@ -134,3 +134,4 @@ export default function AdminCustomersPage() {
     </div>
   );
 }
+

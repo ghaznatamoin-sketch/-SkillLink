@@ -17,12 +17,12 @@ export const DemoRoleSwitcher: React.FC = () => {
   ];
 
   return (
-    <div className="bg-slate-900 border-b border-emerald-950/60 text-xs text-slate-300 py-1.5 px-4 sticky top-0 z-50 transition-colors">
+    <div className="bg-[#050907] border-b border-emerald-900/30 text-xs text-slate-300 py-1.5 px-4 sticky top-0 z-50 transition-colors">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium border border-emerald-500/30">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            MVP Interactive Demo
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-400 font-medium border border-emerald-500/30 shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            MVP Interactive Platform
           </span>
           <span className="hidden sm:inline text-slate-400">
             Simulate roles:
@@ -30,7 +30,7 @@ export const DemoRoleSwitcher: React.FC = () => {
         </div>
 
         {/* Role Toggle Buttons */}
-        <div className="flex items-center gap-1 bg-slate-800/90 p-0.5 rounded-lg border border-slate-700/60">
+        <div className="flex items-center gap-1 bg-[#0d1612] p-0.5 rounded-lg border border-emerald-900/40">
           {roles.map((r) => {
             const Icon = r.icon;
             const isActive = role === r.key;
@@ -40,8 +40,8 @@ export const DemoRoleSwitcher: React.FC = () => {
                 onClick={() => switchRole(r.key)}
                 className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all font-medium ${
                   isActive
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
+                    ? 'bg-gradient-to-r from-emerald-800 to-emerald-700 text-amber-300 shadow-sm border border-amber-500/30'
+                    : 'text-slate-400 hover:text-slate-200 hover:bg-[#15231c]'
                 }`}
                 title={r.desc}
               >
@@ -58,7 +58,7 @@ export const DemoRoleSwitcher: React.FC = () => {
           {role === 'customer' && (
             <Link
               href="/customer"
-              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+              className="flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium transition-colors"
             >
               Customer Dashboard <ArrowRight className="w-3 h-3" />
             </Link>
@@ -66,7 +66,7 @@ export const DemoRoleSwitcher: React.FC = () => {
           {role === 'worker' && (
             <Link
               href="/worker"
-              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+              className="flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium transition-colors"
             >
               Worker Dashboard <ArrowRight className="w-3 h-3" />
             </Link>
@@ -74,7 +74,7 @@ export const DemoRoleSwitcher: React.FC = () => {
           {role === 'admin' && (
             <Link
               href="/admin"
-              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+              className="flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium transition-colors"
             >
               Admin Dashboard <ArrowRight className="w-3 h-3" />
             </Link>

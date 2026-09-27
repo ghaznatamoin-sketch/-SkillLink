@@ -42,24 +42,24 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-7 z-40 bg-white/85 backdrop-blur-md border-b border-emerald-900/10 shadow-sm transition-all">
+    <nav className="sticky top-7 z-40 bg-[#080d0b]/90 backdrop-blur-md border-b border-emerald-900/30 shadow-lg shadow-black/40 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-950 flex items-center justify-center text-white font-bold shadow-md shadow-emerald-900/20 group-hover:scale-105 transition-transform border border-emerald-500/20">
-                <Sparkles className="w-5 h-5 text-mint-300" />
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-700 via-emerald-900 to-[#041a12] flex items-center justify-center text-white font-bold shadow-md shadow-emerald-950/60 group-hover:scale-105 transition-transform border border-amber-500/30">
+                <Sparkles className="w-5 h-5 text-amber-300" />
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
-                  <span className="text-xl font-extrabold text-slate-900 tracking-tight">Skill</span>
-                  <span className="text-xl font-extrabold text-emerald-700 tracking-tight">Link</span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 ml-1">
+                  <span className="text-xl font-extrabold text-slate-100 tracking-tight">Skill</span>
+                  <span className="text-xl font-extrabold text-emerald-400 tracking-tight">Link</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-400/15 text-amber-300 border border-amber-400/30 ml-1">
                     MVP
                   </span>
                 </div>
-                <span className="text-[10px] text-slate-500 font-medium -mt-1">
+                <span className="text-[10px] text-slate-400 font-medium -mt-1">
                   Worldwide Services Marketplace
                 </span>
               </div>
@@ -75,8 +75,8 @@ export const Navbar: React.FC = () => {
                     href={item.href}
                     className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
                       isActive
-                        ? 'bg-emerald-50 text-emerald-800 font-semibold'
-                        : 'text-slate-600 hover:text-emerald-800 hover:bg-slate-50'
+                        ? 'bg-emerald-950/90 text-emerald-300 font-semibold border border-emerald-500/30'
+                        : 'text-slate-300 hover:text-white hover:bg-[#111d18]'
                     }`}
                   >
                     {item.label}
@@ -90,11 +90,11 @@ export const Navbar: React.FC = () => {
           <div className="hidden sm:flex items-center gap-3">
             <Link
               href="/providers"
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-500 text-xs transition-colors border border-slate-200"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0e1714] hover:bg-[#14231e] text-slate-400 hover:text-slate-200 text-xs transition-colors border border-emerald-900/40"
             >
-              <Search className="w-3.5 h-3.5 text-slate-400" />
+              <Search className="w-3.5 h-3.5 text-emerald-400" />
               <span>Search services, skills, or cities...</span>
-              <kbd className="px-1.5 py-0.5 text-[10px] bg-white border border-slate-300 rounded text-slate-400 font-mono">
+              <kbd className="px-1.5 py-0.5 text-[10px] bg-[#172721] border border-emerald-800/40 rounded text-slate-400 font-mono">
                 /
               </kbd>
             </Link>
@@ -103,25 +103,25 @@ export const Navbar: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setShowNotifications(!showNotifications)}
-                className="relative p-2 rounded-lg text-slate-600 hover:text-emerald-800 hover:bg-emerald-50 transition-colors"
+                className="relative p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#111d18] transition-colors border border-transparent hover:border-emerald-900/40"
                 title="Notifications"
                 aria-label="View notifications"
               >
                 <Bell className="w-5 h-5" />
                 {unreadCount > 0 && (
-                  <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white"></span>
+                  <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-amber-400 rounded-full ring-2 ring-[#080d0b]"></span>
                 )}
               </button>
 
               {showNotifications && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-slate-200/80 p-3 z-50 animate-fadeIn">
-                  <div className="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
-                    <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">Notifications</h4>
-                    <span className="text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">
+                <div className="absolute right-0 mt-2 w-80 bg-[#0e1714] rounded-2xl shadow-2xl border border-emerald-500/20 p-3 z-50 animate-fadeIn backdrop-blur-xl">
+                  <div className="flex items-center justify-between pb-2 border-b border-emerald-900/40 px-1">
+                    <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider">Notifications</h4>
+                    <span className="text-[10px] bg-amber-400/20 text-amber-300 border border-amber-400/30 font-semibold px-2 py-0.5 rounded-full">
                       {unreadCount} new
                     </span>
                   </div>
-                  <div className="max-h-72 overflow-y-auto divide-y divide-slate-100 my-1">
+                  <div className="max-h-72 overflow-y-auto divide-y divide-emerald-900/30 my-1">
                     {notifications.length === 0 ? (
                       <p className="text-xs text-slate-400 p-4 text-center">No notifications yet</p>
                     ) : (
@@ -129,15 +129,15 @@ export const Navbar: React.FC = () => {
                         <div
                           key={notif.id}
                           onClick={() => markNotificationAsRead(notif.id)}
-                          className={`p-2.5 rounded-lg text-xs cursor-pointer hover:bg-slate-50 transition-colors ${
-                            !notif.isRead ? 'bg-emerald-50/50' : ''
+                          className={`p-2.5 rounded-lg text-xs cursor-pointer hover:bg-[#14231e] transition-colors ${
+                            !notif.isRead ? 'bg-emerald-950/40' : ''
                           }`}
                         >
                           <div className="flex items-start justify-between gap-1">
-                            <span className="font-semibold text-slate-900">{notif.title}</span>
+                            <span className="font-semibold text-slate-100">{notif.title}</span>
                             <span className="text-[10px] text-slate-400 whitespace-nowrap">{notif.timestamp}</span>
                           </div>
-                          <p className="text-slate-600 mt-0.5 line-clamp-2">{notif.message}</p>
+                          <p className="text-slate-300 mt-0.5 line-clamp-2">{notif.message}</p>
                         </div>
                       ))
                     )}
@@ -148,12 +148,12 @@ export const Navbar: React.FC = () => {
 
             {/* Authenticated / Guest State */}
             {isAuthenticated && user ? (
-              <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
+              <div className="flex items-center gap-2 pl-2 border-l border-emerald-900/40">
                 <Link
                   href={getDashboardHref()}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm shadow-emerald-900/10 transition-all hover:scale-[1.02]"
+                  className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white text-xs font-semibold shadow-md border border-emerald-500/30 transition-all hover:scale-[1.02]"
                 >
-                  <LayoutDashboard className="w-3.5 h-3.5" />
+                  <LayoutDashboard className="w-3.5 h-3.5 text-amber-300" />
                   <span>
                     {role === 'customer'
                       ? 'My Bookings'
@@ -165,7 +165,7 @@ export const Navbar: React.FC = () => {
 
                 <button
                   onClick={logout}
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-rose-400 hover:bg-rose-950/40 transition-colors"
                   title="Sign Out (Switch to Guest)"
                   aria-label="Sign Out"
                 >
@@ -176,13 +176,13 @@ export const Navbar: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Link
                   href="/auth/login"
-                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-800 hover:bg-slate-100 transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#14231e] transition-colors"
                 >
                   Log In
                 </Link>
                 <Link
                   href="/auth/register"
-                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-700 hover:bg-emerald-800 text-white shadow-sm transition-all"
+                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white shadow-md border border-emerald-500/30 transition-all"
                 >
                   Join SkillLink
                 </Link>
@@ -194,7 +194,7 @@ export const Navbar: React.FC = () => {
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+              className="p-2 rounded-lg text-slate-300 hover:bg-[#14231e] transition-colors"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -205,35 +205,35 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-lg px-4 pt-3 pb-6 space-y-3 animate-slide-up">
+        <div className="md:hidden border-t border-emerald-900/40 bg-[#0c1411]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 animate-slide-up">
           <div className="space-y-1">
             <Link
               href="/categories"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800"
+              className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-emerald-950/60 hover:text-emerald-300"
             >
-              <Layers className="w-4 h-4 text-emerald-600" />
+              <Layers className="w-4 h-4 text-emerald-400" />
               <span>All 12 Categories</span>
             </Link>
             <Link
               href="/providers"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800"
+              className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-emerald-950/60 hover:text-emerald-300"
             >
-              <Users className="w-4 h-4 text-emerald-600" />
+              <Users className="w-4 h-4 text-emerald-400" />
               <span>Search Providers</span>
             </Link>
           </div>
 
-          <div className="pt-3 border-t border-slate-100">
+          <div className="pt-3 border-t border-emerald-900/40">
             {isAuthenticated ? (
               <div className="space-y-2">
                 <Link
                   href={getDashboardHref()}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-700 text-white text-sm font-semibold shadow"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 text-white text-sm font-semibold shadow border border-emerald-500/30"
                 >
-                  <LayoutDashboard className="w-4 h-4" />
+                  <LayoutDashboard className="w-4 h-4 text-amber-300" />
                   <span>Open {role.charAt(0).toUpperCase() + role.slice(1)} Dashboard</span>
                 </Link>
                 <button
@@ -241,7 +241,7 @@ export const Navbar: React.FC = () => {
                     logout();
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full py-2 rounded-xl text-center text-xs font-semibold text-rose-600 hover:bg-rose-50 border border-rose-200"
+                  className="w-full py-2 rounded-xl text-center text-xs font-semibold text-rose-400 hover:bg-rose-950/40 border border-rose-900/40"
                 >
                   Sign Out
                 </button>
@@ -251,14 +251,14 @@ export const Navbar: React.FC = () => {
                 <Link
                   href="/auth/login"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-2.5 text-center text-xs font-semibold rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50"
+                  className="py-2.5 text-center text-xs font-semibold rounded-xl border border-emerald-900/40 text-slate-300 hover:bg-[#14231e]"
                 >
                   Log In
                 </Link>
                 <Link
                   href="/auth/register"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-2.5 text-center text-xs font-semibold rounded-xl bg-emerald-700 text-white shadow"
+                  className="py-2.5 text-center text-xs font-semibold rounded-xl bg-emerald-800 text-white shadow border border-emerald-500/30"
                 >
                   Register
                 </Link>

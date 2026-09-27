@@ -108,15 +108,15 @@ function ProvidersContent() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
       {/* Header */}
       <div>
-        <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
+        <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
           <Users className="w-4 h-4" />
           <span>Worldwide Service Professionals</span>
         </div>
-        <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
           Find & Book Verified Service Providers
         </h1>
-        <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-2xl">
-          Compare customer ratings, service areas, hourly rates, and verified credentials across all 10 service categories.
+        <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
+          Compare customer ratings, service areas, hourly rates, and verified credentials across all 12 service sectors. Arranged in balanced pairs.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ function ProvidersContent() {
         totalResults={filteredProviders.length}
       />
 
-      {/* Results Grid or Empty State */}
+      {/* Results Grid or Empty State in PAIRS (2 cards per row) */}
       {filteredProviders.length === 0 ? (
         <EmptyState
           icon={Users}
@@ -138,7 +138,7 @@ function ProvidersContent() {
           onActionClick={handleResetFilters}
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProviders.map((provider) => (
             <ProviderCard
               key={provider.id}

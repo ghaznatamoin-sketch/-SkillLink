@@ -50,7 +50,7 @@ export const RatingStars: React.FC<RatingStarsProps> = ({
       </div>
 
       {showNumber && (
-        <span className={`font-bold text-slate-800 ${textSize}`}>
+        <span className={`font-bold text-slate-100 ${textSize}`}>
           {rating.toFixed(1)}
         </span>
       )}
