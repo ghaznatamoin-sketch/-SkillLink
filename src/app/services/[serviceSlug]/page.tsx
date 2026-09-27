@@ -100,7 +100,7 @@ export default function ServiceDetailPage() {
         {matchingProviders.length === 0 ? (
           <div className="bg-[#0e1714]/85 rounded-3xl p-12 text-center border border-emerald-500/20 space-y-3 shadow-xl shadow-black/40">
             <Users className="w-10 h-10 text-slate-600 mx-auto" />
-            <h4 className="font-bold text-slate-200 text-sm">No specific pro assigned to this demo filter</h4>
+            <h4 className="font-bold text-slate-200 text-sm">No providers currently listed for this specific service</h4>
             <p className="text-xs text-slate-400">You can view all verified pros across all sectors in the provider directory.</p>
             <Link
               href="/providers"

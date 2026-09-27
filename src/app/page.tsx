@@ -283,7 +283,7 @@ export default function HomePage() {
               href="/worker"
               className="px-6 py-3.5 rounded-2xl bg-[#080d0b] border border-amber-400/40 text-amber-300 font-bold text-xs sm:text-sm text-center hover:bg-[#121f19] transition-all"
             >
-              Demo Worker View
+              Provider Portal
             </Link>
           </div>
         </div>

@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-7 z-40 bg-[#080d0b]/90 backdrop-blur-md border-b border-emerald-900/30 shadow-lg shadow-black/40 transition-all">
+    <nav className="sticky top-0 z-40 bg-[#080d0b]/90 backdrop-blur-md border-b border-emerald-900/30 shadow-lg shadow-black/40 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
@@ -55,11 +55,8 @@ export const Navbar: React.FC = () => {
                 <div className="flex items-center gap-1">
                   <span className="text-xl font-extrabold text-slate-100 tracking-tight">Skill</span>
                   <span className="text-xl font-extrabold text-emerald-400 tracking-tight">Link</span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-400/15 text-amber-300 border border-amber-400/30 ml-1">
-                    MVP
-                  </span>
                 </div>
-                <span className="text-[10px] text-slate-400 font-medium -mt-1">
+                <span className="text-[10px] text-slate-400 font-medium -mt-0.5">
                   Worldwide Services Marketplace
                 </span>
               </div>

@@ -90,7 +90,7 @@ export default function LoginPage() {
 
         {/* Role Fast Selector */}
         <div className="space-y-1.5">
-          <label className="block text-xs font-bold text-slate-300">Select Role to Demo</label>
+          <label className="block text-xs font-bold text-slate-300">Select Account Role</label>
           <div className="grid grid-cols-3 gap-2">
             {[
               { role: 'customer' as UserRole, label: 'Customer', icon: UserCheck },
